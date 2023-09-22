@@ -12,14 +12,19 @@ export default function App() {
   const [count, setCount] = useState(0);
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 50 }}>{count}</Text>
-      <StatusBar style="auto" />
-      <Button
-        title="increment"
-        onPress={() => {
-          setCount((current) => current + 1);
-        }} // onClick არის
-      />
+      <View style={{ flex: 3, backgroundColor: "green", width: 350 }}>
+        <Text style={{ fontSize: 50 }}>{count}</Text>
+        <StatusBar style="auto" backgroundColor="white" />
+        <Button
+          title="increment"
+          onPress={() => {
+            setCount((current) => current + 1);
+          }} // onClick არის
+        />
+      </View>
+      <View style={{ flex: 2, backgroundColor: "yellow", width: 350 }}>
+        <Text>text</Text>
+      </View>
     </View>
   );
 }
@@ -27,8 +32,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "red",
     alignItems: "center",
     justifyContent: "center",
+    borderWidth: 10,
+    borderColor: "blue",
   },
 });
