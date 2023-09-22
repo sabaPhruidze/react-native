@@ -1,11 +1,25 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  AlertButton,
+  StatusBar,
+  Button,
+} from "react-native";
+import { useState } from "react";
 
 export default function App() {
+  const [count, setCount] = useState(0);
   return (
     <View style={styles.container}>
-      <Text>hey</Text>
+      <Text style={{ fontSize: 50 }}>{count}</Text>
       <StatusBar style="auto" />
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
     </View>
   );
 }
