@@ -37,8 +37,20 @@ export default function App() {
           { key: "nom" },
           { key: "nom" },
           { key: "nom" },
+          { key: "nom" },
+          { key: "nom" },
+          { key: "nom" },
+          { key: "nom" },
+          { key: "nom" },
+          { key: "nom" },
+          { key: "nom" },
         ]}
         renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+        ItemSeparatorComponent={() => (
+          <View
+            style={{ height: 20, backgroundColor: "blue", width: "100%" }}
+          />
+        )}
       />
     </View>
   );
