@@ -7,14 +7,18 @@ import {
   TextInput,
   Button,
   SafeAreaView,
+  ScrollView,
 } from "react-native";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const inputRef = useRef();
+
   return (
-    <SafeAreaView style={styles.container}>
-      <View
+    <ScrollView>
+      {/* <SafeAreaView style={styles.container}> */}
+      {/* <View
         style={{
           flex: 3,
           backgroundColor: "green",
@@ -23,8 +27,9 @@ export default function App() {
           justifyContent: "center",
         }}
       >
-        <Text style={{ fontSize: 50 }}>{count}</Text>
+       
         <StatusBar style="auto" backgroundColor="white" />
+         <Text style={{ fontSize: 50 }}>{count}</Text>
         <Button
           title="increment"
           onPress={() => {
@@ -38,13 +43,117 @@ export default function App() {
             borderWidth: 1,
             marginTop: 10,
           }}
+          ref={inputRef}
           placeholder="type here for translate"
         />
-      </View>
-      <View style={{ flex: 2, backgroundColor: "yellow", width: 350 }}>
+      </View> */}
+      {/* <View style={{ flex: 2, backgroundColor: "yellow", width: 350 }}>
         <Text>text</Text>
-      </View>
-    </SafeAreaView>
+      </View> */}
+      {/* </SafeAreaView> */}
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: "#FFFF00",
+          borderWidth: 1,
+          marginTop: 10,
+        }}
+        ref={inputRef}
+        placeholder="type here for translate"
+      />
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: "#FFFF00",
+          borderWidth: 1,
+          marginTop: 10,
+        }}
+        ref={inputRef}
+        placeholder="type here for translate"
+      />
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: "#FFFF00",
+          borderWidth: 1,
+          marginTop: 10,
+        }}
+        ref={inputRef}
+        placeholder="type here for translate"
+      />
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: "#FFFF00",
+          borderWidth: 1,
+          marginTop: 10,
+        }}
+        ref={inputRef}
+        placeholder="type here for translate"
+      />
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: "#FFFF00",
+          borderWidth: 1,
+          marginTop: 10,
+        }}
+        ref={inputRef}
+        placeholder="type here for translate"
+      />
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Button
+        title="increment"
+        onPress={() => {
+          setCount((current) => current + 1);
+        }} // onClick არის
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: "#FFFF00",
+          borderWidth: 1,
+          marginTop: 10,
+        }}
+        ref={inputRef}
+        placeholder="type here for translate"
+      />
+    </ScrollView>
   );
 }
 
