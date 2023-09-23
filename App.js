@@ -8,15 +8,30 @@ import {
   Button,
   SafeAreaView,
   ScrollView,
+  Pressable,
 } from "react-native";
 import { useState, useRef } from "react";
 
 export default function App() {
   const [count, setCount] = useState(0);
   const inputRef = useRef();
-
+  const ScrollViewRef = useRef();
   return (
-    <ScrollView>
+    <ScrollView ref={ScrollViewRef}>
+      <Pressable
+        onPress={() => {
+          ScrollViewRef.current?.scrollToEnd?.();
+        }}
+        style={{
+          backgroundColor: "blue",
+          height: 50,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text style={{ color: "white" }}>Scroll button</Text>
+      </Pressable>
       {/* <SafeAreaView style={styles.container}> */}
       {/* <View
         style={{
